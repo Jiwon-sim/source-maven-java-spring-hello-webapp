@@ -12,7 +12,7 @@
 
       name: myweb
 
-      image: "<IMAGE>:{{ lookup('env','BUILD_NUMBER') }}"
+      image: "zziwon/myweb:{{ lookup('env','BUILD_NUMBER') }}"
 
       state: started
 
