@@ -70,9 +70,7 @@ pipeline {
 
       steps {
 
-        sh '<DOCKER_IMAGE_TAGGING_COMMAND>' // Tagging with build number
-
-        sh 'docker image build -t zziwon/myweb:$BUILD_NUMBER zziwon/myweb:latest' // Tagging with latest
+        sh 'docker image tag zziwon/myweb:$BUILD_NUMBER zziwon/myweb:latest' // Tagging with latest
 
       }
 
@@ -88,7 +86,7 @@ pipeline {
 
           sh 'docker image push zziwon/myweb:$BUILD_NUMBER' // Tagging with build number
 
-          sh 'docker image push zziwon/myweb:$BUILD_NUMBER' // Tagging with latest
+          sh 'docker image push zziwon/myweb:latest' // Tagging with latest
 
         }
 
