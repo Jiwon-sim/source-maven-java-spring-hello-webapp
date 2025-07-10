@@ -58,7 +58,7 @@ pipeline {
 
       steps {
 
-        sh 'docker image build -t zziwon/myweb:$BUILD_NUMBER'
+        sh 'docker image build -t zziwon/myweb:$BUILD_NUMBER .'
 
       }
 
